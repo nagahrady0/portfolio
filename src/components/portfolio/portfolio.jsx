@@ -3,7 +3,7 @@ import './portfolio.css';
 
 import {useState} from 'react';
 
-import {data} from '../data/data.js';
+import {data} from '../../data/data.js';
 
 const Portfolio = ()=> {
 
@@ -15,17 +15,18 @@ const changeCategory = (cat)=>{
 const projects = data.map((el, index) => {
 	if(category == "all"){
 	return(
-		  <div key={index}>
-		   
-		    <img src={el.src} alt={el.title} />
+				  <div key={index}>
+				    <a href={el.link} target="_blank">
+				    
+				    	<img src={el.src} alt={el.title} />  
 
-		    <span></span>
-		    <span></span>
-		    
-		    <div> {el.title}</div>
-		    <div>{el.technology}</div>		    
-		    
-		  </div>
+					    <span></span>
+					    <span></span>
+					    
+					    <div> {el.title}</div>
+					    <div>{el.technology}</div>		    
+				    </a> 
+				  </div>
 	)}
 	
 	else if ( category == "challenges"){
@@ -33,16 +34,18 @@ const projects = data.map((el, index) => {
 		if(el.type == "challenges"){
 			return(
 				  <div key={index}>
-				   
-				    <img src={el.src} alt={el.title} />
+				    <a href={el.link} target="_blank">
+				    
+				    	<img src={el.src} alt={el.title} />  
 
-				    <span></span>
-				    <span></span>
-				    
-				    <div> {el.title}</div>
-				    <div>{el.technology}</div>		    
-				    
+					    <span></span>
+					    <span></span>
+					    
+					    <div> {el.title}</div>
+					    <div>{el.technology}</div>		    
+				    </a> 
 				  </div>
+				
 			)		
 		
 		}
@@ -55,15 +58,16 @@ const projects = data.map((el, index) => {
 		if(el.type == "projects"){
 			return(
 				  <div key={index}>
-				   
-				    <img src={el.src} alt={el.title} />
+				    <a href={el.link} target="_blank">
+				    
+				    	<img src={el.src} alt={el.title} />  
 
-				    <span></span>
-				    <span></span>
-				    
-				    <div> {el.title}</div>
-				    <div>{el.technology}</div>		    
-				    
+					    <span></span>
+					    <span></span>
+					    
+					    <div> {el.title}</div>
+					    <div>{el.technology}</div>		    
+				    </a> 
 				  </div>
 			)		
 		
@@ -76,12 +80,25 @@ const projects = data.map((el, index) => {
 	
 });
 
+const removeActive = ()=>{
+
+const arr = document.querySelectorAll('li');
+const arrli = Array.from(arr);
+	console.log(arrli);
+	arrli.map((el)=>{
+		el.classList.remove("active");
+	});
+	
+	
+	
+}
+
   return (
     <>
     	<div className="portfolio">
 		<div className="container">
 			
-			<h2> my portfolio </h2>
+			<h1> my portfolio </h1>
 			<p>
 				i take pride in paying attention to the smallest details and making sure that my work is
 				pixel perfect .i am excited to bring my skills and experience to help businesses achieve
@@ -89,9 +106,12 @@ const projects = data.map((el, index) => {
 			</p>
 			<div>
 				<ul>
-				  <li onClick={() => changeCategory("all")}>all</li>
-				  <li onClick={() => changeCategory("projects")}>projects</li>
-				  <li onClick={() => changeCategory("challenges")}>challenges</li>
+				  <li className="active" onClick={(e) => {
+				  	removeActive();e.currentTarget.classList.add("active");changeCategory("all")}}>all</li>
+				  <li onClick={(e) => {
+				  	removeActive();e.currentTarget.classList.add("active");changeCategory("projects")}}>projects</li>
+				  <li onClick={(e)=>{
+				  	removeActive();e.currentTarget.classList.add("active");changeCategory("challenges")}}>challenges</li>
 				</ul>
 			</div>
 			<div>
@@ -99,9 +119,7 @@ const projects = data.map((el, index) => {
 				{projects}
 			</div>	
 			
-			<button>
-				see more
-			</button>			
+			
 		
 		
 		</div>

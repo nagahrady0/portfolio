@@ -3,8 +3,6 @@ import './about.css';
 import UI from '../../assets/ui-design.png';
 import website from '../../assets/website-design.png';
 import app from '../../assets/app-design.png';
-
-
 const About = ()=> {
  
 
@@ -13,9 +11,9 @@ const About = ()=> {
     	<div className="about">
 		<div className="container">
 			
-			<div>
+			<h1>
 				what i do
-			</div>
+			</h1>
 			<p>
 				i am a skilled and passionate web designer with experience in creating visually appealing 
 				and user-friendly websites. ihave a strong understanding of design and a keen eye for detail 

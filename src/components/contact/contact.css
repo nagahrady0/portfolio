@@ -5,16 +5,28 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:15px;
-color:#fff;
+color:var(--h1-color);
 }
 
 .contact .container > h1{
 font-size:30px;
 margin-top:20px;
+position:relative;
+margin-bottom:5px;
+}
+
+.contact .container > h1:before{
+content:'';
+display:block;
+height:3px;
+width:100%;
+background:var(--second-color);
+position:absolute;
+bottom:-12px;
 }
 
 .contact .container > p{
-color:rgba(255,255,255,.6);
+color:var(--p-color);
 }
 
 .contact .container > form{
@@ -29,7 +41,7 @@ padding-top:30px;
 .custom-input{
 width:100%;
 position:relative;
-background:#282828;
+background:var(--second-background-color);
 border-radius:8px;
 height:40px;
 }
@@ -42,7 +54,7 @@ height:150px;
 position:absolute;
 top: 10px;
 left: 40px;
-color:rgba(255,255,255,.6);
+color:var(--p-color);
 z-index:1;
 transition:all .5s ease-in-out;
 }
@@ -55,7 +67,7 @@ outline:none;
 border:none;
 border-radius:8px;
 text-indent:20px;
-color:#fff;
+color:var(--h1-color);
 position:absolute;
 z-index:2;
 }
@@ -70,29 +82,71 @@ padding-left:0;
 .has-data + label{
 top: -25px;
 left: 18px;
-color:#fff;
+color:var(--h1-color);
 }
 
 .contact .container > form >input[type="submit"]{
 width:fit-content;
-padding:10px 20px;
+padding:8px 25px;
 text-indent:0;
 cursor:pointer;
-background:#fff;
-color:#000;
+background:var(--btn-bg-color);
+color:var(--button-color);
 margin:15px 0;
-border-radius:15px;
-border:none;
+border-radius:10px;
+border:3px solid var(--btn-border-color);
+transition:.5s;
+font-size:22px;
+font-weight:500;
+letter-spacing:2px;
 }
-
-.icons img{
-width:40px;
-height:40px;
+.contact .container > form >input[type="submit"]:hover{
+background:var(--btn-hover-bg-color);
+color:var(--btn-hover-color);
+}
+.custom-social-icon{
+font-size:35px;
+width:35px;
+height:35px;
+line-height:35px;
 margin-left:15px;
+cursor:pointer;
 transition:.3s;
+background:var(--btn-hover-bg-color);
+padding:5px;
+border-radius:2px;
 }
 
-.icons img:hover{
+
+.whats{
+color:#59F878;
+}
+
+.telegram{
+color:#2FADE6;
+}
+
+.face{
+color:#4867AA;
+}
+
+.twitter{
+color:#1EA1F3;
+}
+
+.insta{
+color:#F501C0;
+}
+
+.youtube{
+color:#FF0808;
+}
+
+
+
+
+
+.custom-social-icon:hover{
 transform:scale(1.3);
 }
 

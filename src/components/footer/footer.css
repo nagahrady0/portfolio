@@ -1,9 +1,14 @@
 .footer{
-background:#282828;
+background:var(--second-background-color);
 display:flex;
 justify-content:center;
 align-items:center;
 padding:15px 0;
-color:rgba(255,255,255,.8);
+color:var(--p-color);
 text-transform:capitalize;
+
+}
+
+.footer .container{
+text-align:center;
 }

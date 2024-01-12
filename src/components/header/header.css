@@ -1,32 +1,35 @@
 
 .header > div{
-height:calc(100vh - 100px);
-margin:100px auto 0;
+min-height:calc(100vh);
 max-width:1200px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px;
-
 }
 
 .header > div > div.col-left{
 display:flex;
 flex-direction:column;
 gap:30px;
-color:#fff;
+color:var(--h1-color);
+}
+.header > div > div.col-left div{
+font-size:30px;
 }
 .header > div > div.col-left div , 
 .header > div > div.col-left h1{
 text-transform:capitalize;
 }
+
 .header > div > div.col-left h1{
-font-size:32px;
+font-size:30px;
 }
 .header > div > div.col-left h1 > span:first-of-type{
-color:orange;
+color:var(--second-color);
 display:inline-block;
 margin-bottom:15px;
+margin-left:15px;
 }
 
 .header > div > div.col-left h1 > span:nth-of-type(2) span{
@@ -36,22 +39,33 @@ text-transform:lowercase;
 
 .header > div > div.col-left p{
 line-height:1.5rem;
-color:rgba(255,255,255,.7);
+color:var(--p-color);
 }
 .header > div > div.col-left button{
 width:fit-content;
 cursor:pointer;
 padding:10px 20px;
-border-radius:15px;
+border-radius:10px;
 border:none;
 display:flex;
 gap:5px;
 align-items:center;
+background:var(--btn-bg-color);
+border:3px solid var(--btn-border-color);
+color:var(--button-color);
+transition:.5s;
+font-size:22px;
+font-weight:500;
+letter-spacing:2px;
 }
 
-.header > div > div.col-left button> img{
-width:20px;
+
+.header > div > div.col-left button:hover{
+background:var(--btn-hover-bg-color);
+color:var(--btn-hover-color);
 }
+
+
 .header > div > div{
 width:50%;
 }
@@ -81,8 +95,11 @@ width:90%;
 margin-top:80px;
 }
 
+
+
+
 .header > div > div.col-left h1{
-font-size:25px;
+font-size:22px;
 }
 
 

@@ -5,10 +5,9 @@ import Swal from 'sweetalert';
 
 import './contact.css';
 
-import face from '../../assets/facebook-icon.png';
-import twitter from '../../assets/twitter.png';
-import youtube from '../../assets/youtube.png';
-import insta from '../../assets/instagram.png';
+
+
+import { FaWhatsapp , FaTelegram , FaFacebook, FaInstagram , FaTwitter , FaYoutube} from 'react-icons/fa';
 
 
 const Contact = ()=> {
@@ -81,9 +80,30 @@ const Contact = ()=> {
     Swal(e);
   };	
  	
- 	
- 	
- 	
+ 
+ 
+ const phoneNumber = '01027149300'; // Replace with the actual phone number
+
+  const openWhatsAppChat = () => {
+    // Create a WhatsApp chat link
+    const whatsappLink = `https://wa.me/${phoneNumber}`;
+
+    // Open the link in a new tab or window
+    window.open(whatsappLink, '_blank');
+  };
+  
+  
+  
+
+  const openTelegramChat = () => {
+    // Create a Telegram chat link with a phone number
+    const telegramLink = `https://t.me/add?phone=${encodeURIComponent(phoneNumber)}`;
+
+    // Open the link in a new tab or window
+    window.open(telegramLink, '_blank');
+  };  
+  
+  	
 
   return (
     <>
@@ -120,24 +140,29 @@ const Contact = ()=> {
     					</label>     					
     				</div>
     				
-    				<input type="submit" />
+    				<input type="submit"  value="send" />
     			</form>
     			
     			
     			<div className="icons">
-    				<a href="">
-    					<img src={face} alt="face" />
-    				</a>
-    				<a href="">
-    					<img src={twitter} alt="twitter" />
-    				</a>
-    				<a href="">
-    					<img src={youtube} alt="youtube" />
-    				</a>
-    				<a href="">
-    					<img src={insta} alt="insta" />
-    				</a>    				    				    				
-    				
+    					<FaWhatsapp className="custom-social-icon whats"  onClick={openWhatsAppChat}/>
+    					<FaTelegram className="custom-social-icon telegram"  onClick={openTelegramChat} />
+    					
+    					<a href="https://www.facebook.com/nagah.rady.10" target="_blank">
+    						<FaFacebook className="custom-social-icon face" />
+    					</a>
+    					
+    					<a href="" target="_blank"> 
+    						<FaTwitter className="custom-social-icon twitter" />
+    					</a>
+    					
+    					<a href="" target="_blank"> 
+    						<FaInstagram className="custom-social-icon insta" />
+    					</a>
+    					
+    					<a href="" target="_blank"> 	
+    						<FaYoutube className="custom-social-icon youtube" />
+    					</a>	
     			</div>
     		</div>
     	</div>

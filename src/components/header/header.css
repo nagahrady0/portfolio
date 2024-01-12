@@ -1,0 +1,106 @@
+
+.header > div{
+height:calc(100vh - 100px);
+margin:100px auto 0;
+max-width:1200px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px;
+
+}
+
+.header > div > div.col-left{
+display:flex;
+flex-direction:column;
+gap:30px;
+color:#fff;
+}
+.header > div > div.col-left div , 
+.header > div > div.col-left h1{
+text-transform:capitalize;
+}
+.header > div > div.col-left h1{
+font-size:32px;
+}
+.header > div > div.col-left h1 > span:first-of-type{
+color:orange;
+display:inline-block;
+margin-bottom:15px;
+}
+
+.header > div > div.col-left h1 > span:nth-of-type(2) span{
+text-transform:lowercase;
+
+}
+
+.header > div > div.col-left p{
+line-height:1.5rem;
+color:rgba(255,255,255,.7);
+}
+.header > div > div.col-left button{
+width:fit-content;
+cursor:pointer;
+padding:10px 20px;
+border-radius:15px;
+border:none;
+display:flex;
+gap:5px;
+align-items:center;
+}
+
+.header > div > div.col-left button> img{
+width:20px;
+}
+.header > div > div{
+width:50%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:767px){
+
+
+.header > div{
+
+max-width:600px;
+height:auto;
+flex-direction:column;
+align-items:center;
+margin:25px auto;
+padding:0px;
+}
+
+.header > div > div.col-left{
+width:90%;
+margin-top:80px;
+}
+
+.header > div > div.col-left h1{
+font-size:25px;
+}
+
+
+
+.header > div > div.col-right{
+display:none;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,123 @@
+.contact .container{
+max-width:1200px;
+margin:25px auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+color:#fff;
+}
+
+.contact .container > h1{
+font-size:30px;
+margin-top:20px;
+}
+
+.contact .container > p{
+color:rgba(255,255,255,.6);
+}
+
+.contact .container > form{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:40px;
+width:50%;
+padding-top:30px;
+}
+
+.custom-input{
+width:100%;
+position:relative;
+background:#282828;
+border-radius:8px;
+height:40px;
+}
+
+.custom-input:nth-child(3){
+height:150px;
+}
+
+.custom-input label{
+position:absolute;
+top: 10px;
+left: 40px;
+color:rgba(255,255,255,.6);
+z-index:1;
+transition:all .5s ease-in-out;
+}
+
+.contact .container > form > .custom-input > input ,.contact .container > form > .custom-input > textarea {
+width:100%;
+height:100%;
+background:transparent;
+outline:none;
+border:none;
+border-radius:8px;
+text-indent:20px;
+color:#fff;
+position:absolute;
+z-index:2;
+}
+
+.contact .container > form > .custom-input >textarea {
+padding:10px ; 
+padding-left:0;
+}
+
+.contact .container > form > .custom-input > input:focus + label ,
+.contact .container > form > .custom-input >textarea:focus + label , 
+.has-data + label{
+top: -25px;
+left: 18px;
+color:#fff;
+}
+
+.contact .container > form >input[type="submit"]{
+width:fit-content;
+padding:10px 20px;
+text-indent:0;
+cursor:pointer;
+background:#fff;
+color:#000;
+margin:15px 0;
+border-radius:15px;
+border:none;
+}
+
+.icons img{
+width:40px;
+height:40px;
+margin-left:15px;
+transition:.3s;
+}
+
+.icons img:hover{
+transform:scale(1.3);
+}
+
+
+
+@media screen and (max-width:767px){
+
+.contact .container{
+max-width:600px;
+}
+
+.contact .container > h1{
+font-size:22px;
+margin-top:20px;
+}
+
+.contact .container > p{
+width:90vw;
+text-align:center;
+}
+
+.contact .container > form{
+width:90%;
+}
+
+}
+
+

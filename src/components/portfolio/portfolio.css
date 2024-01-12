@@ -1,0 +1,199 @@
+.portfolio .container{
+max-width:1200px;
+margin:25px auto;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:35px;
+color:#fff;
+
+}
+
+.portfolio .container > h2{
+margin-top:30px;
+}
+.portfolio .container > p{
+text-align:center;
+line-height:1.5rem;
+width:60%;
+color:rgba(255,255,255,.7);
+}
+.portfolio .container > div:nth-of-type(1){
+background:rgba(40,40,40,1);
+border-radius:25px;
+box-shadow:1px 1px 12px rgba(0,0,0,.9);
+padding:0 25px;
+
+}
+.portfolio .container > div:nth-of-type(1) ul{
+list-style:none;
+display:flex;
+gap:25px;
+
+}
+.portfolio .container > div:nth-of-type(1) ul li{
+text-transform:capitalize;
+cursor:pointer;
+padding:15px ;
+transition:.2s;
+font-size:18px;
+font-weight:500;
+}
+
+.portfolio .container > div:nth-of-type(1) ul li:hover{
+color:gold;
+height:100%;
+}
+
+.portfolio .container > div:nth-of-type(2){
+display:grid;
+grid-template-columns:repeat(3 , 1fr);
+gap:20px;
+}
+
+
+
+
+.portfolio .container > div:nth-of-type(2) > div {
+position:relative;
+overflow:hidden;
+height:280px;
+}
+.portfolio .container > div:nth-of-type(2) > div > img{
+width:100%;
+height:100%;
+}
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):before ,
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):after ,
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):before ,
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):after {
+position:absolute;
+content:'';
+background:orange;
+transition:.3s;
+}
+
+
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):before ,
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):after {
+width:2px;
+height:0%;
+}
+
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):before ,
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):after {
+height:2px;
+width:0%;
+}
+
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):before{
+left:0;
+bottom:0;
+} 
+
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(2):after{
+right:0;
+top:0;
+} 
+.portfolio .container > div:nth-of-type(2) > div:hover > span:nth-child(2):after ,
+.portfolio .container > div:nth-of-type(2) > div:hover > span:nth-child(2):before{
+height:100%;
+}
+
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):before{
+left:0;
+top:0;
+} 
+.portfolio .container > div:nth-of-type(2) > div > span:nth-child(3):after{
+right:0;
+bottom:0;
+} 
+
+.portfolio .container > div:nth-of-type(2) > div:hover > span:nth-child(3):after ,
+.portfolio .container > div:nth-of-type(2) > div:hover > span:nth-child(3):before{
+width:100%;
+}
+
+.portfolio .container > div:nth-of-type(2) > div:hover > img{
+opacity:.3;
+transition-delay:.3s;
+transition-duration:.3s;
+}
+
+.portfolio .container > div:nth-of-type(2) > div > div:nth-child(4) ,
+.portfolio .container > div:nth-of-type(2) > div > div:nth-child(5){
+position:absolute;
+left:25px;
+color:orange;
+font-size:22px;
+}
+
+.portfolio .container > div:nth-of-type(2) > div > div:nth-child(4) {
+top:-100px;
+}
+.portfolio .container > div:nth-of-type(2) > div > div:nth-child(5){
+bottom:-100px;
+}
+
+
+.portfolio .container > div:nth-of-type(2) > div:hover  > div:nth-child(4){
+top:50px;
+transition-delay:.6s;
+transition-duration:.3s;
+}
+.portfolio .container > div:nth-of-type(2) > div:hover > div:nth-child(5){
+bottom:50px;
+transition-delay:.6s;
+transition-duration:.3s;
+}
+
+.portfolio .container > button{
+padding:10px 30px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+}
+
+
+
+
+
+@media screen and (max-width:767px){
+
+
+.portfolio .container{
+max-width:600px;
+margin:0 auto;
+}
+
+
+
+
+
+.portfolio .container > p{
+
+width:90%;
+}
+
+.portfolio .container > div:nth-of-type(2){
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:20px;
+}
+
+.portfolio .container > div:nth-of-type(2) div{
+width:90%;
+
+}
+}
+
+
+
+
+
+
+
+
+

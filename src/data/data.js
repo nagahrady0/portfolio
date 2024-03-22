@@ -8,6 +8,13 @@ export const data = [
 	'link':'https://nagahrady0.github.io/advice/',
 },
 {
+	"src":'xo.png',
+	"title":'xo game',
+	"type":'projects',
+	"technology":"html , css and js ",
+	'link':'https://nagahrady0.github.io/xo/',
+},
+{
 	"src":'todo.png',
 	"title":'todo list',
 	"type":'projects',

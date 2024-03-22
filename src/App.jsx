@@ -1,6 +1,8 @@
 
 import './App.css'
 import {useState , useEffect} from 'react';
+import { useSelector , useDispatch} from 'react-redux';
+
 
 import Headroom from 'react-headroom';
 import Navbar from './components/navbar/navbar.jsx';
@@ -10,9 +12,9 @@ import Portfolio from './components/portfolio/portfolio.jsx';
 import Skills from './components/skills/skills.jsx';
 import Contact from './components/contact/contact.jsx';
 import Footer from './components/footer/footer.jsx';
+import Loader from './components/loader/loader.jsx';
 
-
-
+import {setLoading} from './redux/actions.js';
 
 function App() {
  
@@ -72,21 +74,46 @@ const darkmode = {
 }
 
 
+const state = useSelector(state => state.loading);
+const dispatch = useDispatch();
+
+
+ window.onload = ()=> {    // code to be excuted after whole page is loaded
+ 	const timeout = setTimeout(()=>{ // delay code two seconds to show loading if the internet is speed
+ 		dispatch(setLoading(false)); // fire action to disappear loading 
+ 		} , 2000);
+ 	}	
+ 	
+
+
+ 		
+ 
 
   return (
     <div style={mode == "light" ? lightmode : darkmode}> 
 
+	{!state?(	    	
+		
+		<>
+		<Headroom>
+	    		<Navbar mode={mode} setMode={setMode}/>
+	    	</Headroom>
+	    	
+	    	<Header />
+	    	<About />
+	    	<Skills />
+	    	<Portfolio />
+	    	<Contact />
+	    	<Footer />
+	    	</>
+	    	):
+	    	
+	    	<Loader />
+	
+	
+	}
 
-    	<Headroom>
-    		<Navbar mode={mode} setMode={setMode}/>
-    	</Headroom>
     	
-    	<Header />
-    	<About />
-    	<Skills />
-    	<Portfolio />
-    	<Contact />
-    	<Footer />
 
     </div>
   )

@@ -167,6 +167,32 @@ transition-duration:.3s;
 color:var(--second-color);
 }
 
+.pagination ul{
+list-style:none;
+display:flex;
+gap:10px;
+
+}
+.pagination ul li{
+cursor:pointer;
+color:var(--button-color);
+border:2px solid var(--btn-border-color);
+color:var(--button-color);
+padding:10px;
+  transition:.5s;
+}
+
+
+
+.pagination ul li.active{
+color:var(--second-color);
+}
+
+.pagination ul li:not(.active):hover{
+background:var(--btn-hover-bg-color);
+color:var(--btn-hover-color);
+
+}
 
 @media screen and (max-width:767px){
 

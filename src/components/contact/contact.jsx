@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef , useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import './contact.css';
 
@@ -12,6 +13,9 @@ import { FaWhatsapp , FaTelegram , FaFacebook, FaInstagram , FaTwitter , FaYoutu
 
 const Contact = ()=> {
  
+    useEffect(() => {
+        AOS.init();
+      }, [])
  	
  	
  	const handlelabel = ()=>{
@@ -116,7 +120,7 @@ const Contact = ()=> {
     			
     			
     			<form ref={form} onSubmit={sendEmail}>
-    				<div className="custom-input">
+    				<div className="custom-input" data-aos="fade-right">
 
     					<input type="text" onBlur={handlelabel}  name="user_name" />
     					<label>
@@ -124,7 +128,7 @@ const Contact = ()=> {
     					</label>    					
     				</div>
     				
-    				<div className="custom-input">
+    				<div className="custom-input" data-aos="fade-left">
    				
     					<input type="email" onBlur={handlelabel}  name="user_email" />
     					<label>
@@ -132,7 +136,7 @@ const Contact = ()=> {
     					</label>     					
     				</div>
     				
-    				<div className="custom-input">
+    				<div className="custom-input" data-aos="fade-right">
    				
     					<textarea onBlur={handlelabel} name="message" ></textarea>
     					<label>
@@ -140,7 +144,7 @@ const Contact = ()=> {
     					</label>     					
     				</div>
     				
-    				<input type="submit"  value="send" />
+    				<input type="submit"  value="send" data-aos="fade-left" />
     			</form>
     			
     			

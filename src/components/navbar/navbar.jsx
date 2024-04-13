@@ -38,7 +38,7 @@ const Navbar = (props)=> {
 		else if (props.mode == 'dark'){
 
 			props.setMode('light');
-			document.body.style.background = "#fff";
+			document.body.style.background = "#f8f8f8";
 			localStorage.setItem('mymode' , 'light');
 			console.log('dark');
 		

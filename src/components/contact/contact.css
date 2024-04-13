@@ -112,7 +112,7 @@ line-height:35px;
 margin-left:15px;
 cursor:pointer;
 transition:.3s;
-background:var(--btn-hover-bg-color);
+background:var(--second-background-color);
 padding:5px;
 border-radius:2px;
 }

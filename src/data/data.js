@@ -1,11 +1,26 @@
 export const data = [
 
 {
+	"src":'social-links-profile-main.jpg',
+	"title":'social-links-profile',
+	"type":'challenges',
+	"technology":"html , css",
+	'link':'https://nagahrady0.github.io/social-links-profile/',
+},
+
+{
 	"src":'advice.jpg',
 	"title":'advice app',
 	"type":'challenges',
 	"technology":"html , css , js and api ",
 	'link':'https://nagahrady0.github.io/advice/',
+},
+{
+	"src":'recip-page.jpg',
+	"title":'recip-page',
+	"type":'challenges',
+	"technology":"html , css",
+	'link':'https://nagahrady0.github.io/recipe-page/',
 },
 {
 	"src":'xo.png',

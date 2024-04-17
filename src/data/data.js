@@ -1,4 +1,31 @@
 export const data = [
+{
+	"src":'age-calculator.jpg',
+	"title":'age calculator',
+	"type":'challenges',
+	"technology":"html , css and js",
+	'link':'https://nagahrady0.github.io/age-calculator/',
+},
+{
+	"src":'news-home-page.jpg',
+	"title":'news home page',
+	"type":'challenges',
+	"technology":"html , css and js",
+	'link':'https://nagahrady0.github.io/news-homepage/',
+},
+{
+	"src":'faq-accordion.jpg',
+	"title":'FAQ accordion',
+	"type":'challenges',
+	"technology":"html , css and js",
+	'link':'https://nagahrady0.github.io/faq-accordion/',
+},
+
+
+
+
+
+
 
 {
 	"src":'social-links-profile-main.jpg',

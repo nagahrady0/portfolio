@@ -1,5 +1,26 @@
 export const data = [
 {
+	"src":'country.jpg',
+	"title":'REST Countries API with color ',
+	"type":'challenges',
+	"technology":"React and Redux",
+	'link':'https://nagahrady0.github.io/countries/',
+},
+{
+	"src":'intro-component.jpg',
+	"title":'intro component',
+	"type":'challenges',
+	"technology":"html , css and js",
+	'link':'https://nagahrady0.github.io/intro-component/',
+},
+{
+	"src":'blog-card.jpg',
+	"title":'blog card',
+	"type":'challenges',
+	"technology":"html and css",
+	'link':'https://nagahrady0.github.io/blog-preview-card/',
+},
+{
 	"src":'age-calculator.jpg',
 	"title":'age calculator',
 	"type":'challenges',
@@ -20,12 +41,6 @@ export const data = [
 	"technology":"html , css and js",
 	'link':'https://nagahrady0.github.io/faq-accordion/',
 },
-
-
-
-
-
-
 
 {
 	"src":'social-links-profile-main.jpg',

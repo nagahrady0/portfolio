@@ -13,13 +13,13 @@ const inter = Inter({
   variable: "--font-en",
 });
 export const metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://nagahrady.vercel.app/"),
   title: "Nagah Rady | Web Designer & Front End Developer",
   description: "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
   openGraph: {
     title: "Nagah Rady | Web Designer & Front End Developer",
     description: "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
-    url: "http://localhost:3000",
+    url: "https://your-vercel-domain.vercel.app",
     siteName: "Nagah Rady Portfolio",
     images: [
       {
@@ -36,6 +36,9 @@ export const metadata = {
     title: "Nagah Rady | Web Designer & Front End Developer",
     description: "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
     images: ["/og-image.png"],
+  },
+  verification: {
+    google: "i-xPsKLIMHewIeYku54-cojkMuZxFjbTtDqz72AyGfU",
   },
 };
 

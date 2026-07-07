@@ -19,7 +19,7 @@ export const metadata = {
   openGraph: {
     title: "Nagah Rady | Web Designer & Front End Developer",
     description: "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
-    url: "https://your-vercel-domain.vercel.app",
+    url: "https://nagahrady.vercel.app/",
     siteName: "Nagah Rady Portfolio",
     images: [
       {

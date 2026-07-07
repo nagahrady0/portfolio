@@ -46,7 +46,7 @@ const Contact = ()=> {
 		formError.push("message empty");			
 	
 	if(formError.length == 0){
-	  	emailjs.sendForm('service_l6zyc5h', 'template_sdgzr85', form.current, 'KUFSDDPWFSLwpoQZJ')
+	  	emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
 	     	 .then((result) => {
 
 		  reset();

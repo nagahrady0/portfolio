@@ -53,8 +53,7 @@ const Navbar = (props) => {
         </div>
       </div>
 
-      <ul className={`md:hidden flex flex-col absolute top-[80px] w-full bg-[var(--second-background-color)] text-[var(--h1-color)] transition-all duration-500 ${isOpen ? 'left-0' : 'left-[-100vw]'}`}>
-        {mobileLinks.map((link, index) => (
+<ul className={`md:hidden flex flex-col absolute top-[80px] left-0 w-full bg-[var(--second-background-color)] text-[var(--h1-color)] transition-all duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-[-100%]'}`}>        {mobileLinks.map((link, index) => (
           <NavLink key={index} to={link}  onClick={() => setIsOpen(false)} >
               {t(link)}
           </NavLink>

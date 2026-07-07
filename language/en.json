@@ -1,0 +1,57 @@
+{
+  "nagah": "NaGaH",
+  "home": "Home",
+  "about": "About",
+  "skills": "Skills",
+  "portfolio": "Portfolio",
+  "contact": "Contact Me", 
+
+  "hello": "Hello" ,
+  "i'm": "i'm",
+  "Nagah Rady": "Nagah Rady",
+  "a front end developer": "a Front End Developer",
+  "web designer": "Web Designer",
+  "i am": "I am",
+  "header paragraph": "I am a skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
+  "hire me": "Hire Me",
+
+
+  "about title": "What I Do",
+  "about paragraph": "I am a skilled and passionate web designer with experience in creating visually appealing and user-friendly websites. I have a strong understanding of design and a keen eye for detail. I am proficient in HTML, CSS, and JavaScript as well as design software such as Adobe Photoshop and Illustrator.",
+  "ui/ux design": "UI/UX Design",
+  "ui/ux design description": "I create intuitive and engaging user interfaces that enhance the overall user experience.",
+  "website design": "Website Design",
+  "website design description": "I design responsive and visually appealing websites that provide an excellent user experience.",
+  "app design": "App Design",
+  "app design description": "I create intuitive and engaging mobile applications that provide a seamless user experience.",
+
+
+
+  "portfolio title": "My Portfolio",
+  "portfolio description":" I take pride in paying attention to the smallest details and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help businesses achieve their goals and create a strong online presence.",
+  "all": "All",
+  "projects": "Projects",
+  "challenges": "Challenges",
+
+  "contact description": "Please fill out the form below to discuss any work opportunities",
+  "username": "Username",
+  "email": "Email", 
+  "message": "Message",
+  "send": "Send",
+
+"user empty": "Please enter your name",
+"email empty": "Please enter your email",
+"message empty": "Please enter your message",
+"message sent successfully": "Message sent successfully!",
+"something went wrong": "Something went wrong, please try again",
+
+    "copyright": "Copyright © 2023 Nagah Rady. All rights reserved."  ,
+
+"notFound": {
+  "title": "Page not found",
+  "message": "The page you're looking for doesn't exist in my portfolio. It may have been deleted or the link is incorrect.",
+  "button": "Back to home"
+}
+
+
+}

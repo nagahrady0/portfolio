@@ -1,0 +1,11 @@
+
+.contact .container > form > .custom-input > input:focus + label ,
+.contact .container > form > .custom-input >textarea:focus + label , 
+.has-data + label{
+top: -25px;
+inset-inline-start: 18px;  /* ← هنا الحل */
+color:var(--h1-color);
+}
+
+
+

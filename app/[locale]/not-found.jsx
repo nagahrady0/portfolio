@@ -1,19 +1,11 @@
 "use client";
 import { useTranslations } from 'next-intl';
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export default function NotFound() {
   const router = useRouter();
-  const [mounted, setMounted] = useState(false);
-  const { t } = useTranslations();
-
-  useEffect(() => {
-    const savedLang = localStorage.getItem("language") || "en";
-    i18n.changeLanguage(savedLang).then(() => setMounted(true));
-  }, []);
-
-  if (!mounted) return null;
+  // لو أنت مقسم الـ JSON لسكشنز، تأكد إن المفاتيح دي جوه ملف الترجمة، أو سيب الـ Namespace فاضي لو نصوص عامة
+  const t = useTranslations(); 
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-8 [background:var(--main-background-color)]">
@@ -35,19 +27,20 @@ export default function NotFound() {
 
       <div className="w-16 h-0.5 rounded-full mx-auto mb-4 [background:var(--second-color)]" />
 
+      {/* الـ next-intl هتقرأ اللغة الحالية تلقائياً من المسار بدون الحاجة لـ localStorage */}
       <p className="text-sm tracking-[4px] uppercase mb-6 [color:var(--p-color)]">
-        {t("notFound.title")}
+        {t("title")}
       </p>
 
       <p className="text-base text-center max-w-xs leading-relaxed mb-8 [color:var(--p-color)]">
-        {t("notFound.message")}
+        {t("message")}
       </p>
 
       <button
         onClick={() => router.push("/")}
         className="px-8 py-3 rounded-full text-sm font-semibold tracking-wide cursor-pointer transition-transform hover:scale-105 [background:var(--second-color)] [color:var(--main-background-color)]"
       >
-        {t("notFound.button")}
+        {t("button")}
       </button>
     </div>
   );

@@ -20,7 +20,7 @@ const About = () => {
         <Heading>
          {t('about title')}
         </Heading>
-        <p className="w-[60%] max-md:w-[90%] text-center leading-relaxed my-8 text-[var(--p-color)]">
+        <p className="w-[60%] max-md:w-[90%] text-[length:var(--text-paragraph)]  text-center leading-relaxed my-8 text-[var(--p-color)]">
           {t('about paragraph')}
         </p>
 
@@ -33,8 +33,8 @@ const About = () => {
               <Image src={icon} alt={key} width={50} height={50} />
             </div>
             <div>
-              <h2 className="font-semibold mb-1">{t(key)}</h2>
-              <p className="text-[var(--p-color)] leading-relaxed">{t(`${key} description`)}</p>
+              <h2 className="text-[length:var(--text-heading)] font-semibold mb-1">{t(key)}</h2>
+              <p className=" text-[length:var(--text-small)]  text-[var(--p-color)] leading-relaxed">{t(`${key} description`)}</p>
             </div>
           </div>
         ))}

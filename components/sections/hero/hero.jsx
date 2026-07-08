@@ -61,11 +61,11 @@ const Hero = () => {
 
         <div className="w-1/2 max-md:w-[90%] max-md:mt-20 flex flex-col gap-8 text-[var(--h1-color)]">
 
-          <div className="text-4xl md:text-5xl font-extrabold  mb-2 capitalize">{t('hello')}</div>
+          <div className="text-[length:var(--text-greeting)] font-extrabold  mb-2 capitalize">{t('hello')}</div>
 
-          <h1 className="text-3xl md:text-4xl font-bold capitalize">
+          <h1 className="whitespace-nowrap text-[length:var(--text-display)] font-bold capitalize">
             {t("i'm")}
-            <span className="text-3xl md:text-4xl font-bold text-[var(--second-color)] inline-block mb-4 ml-4">
+            <span className="text-[length:var(--text-display)] font-bold text-[var(--second-color)] inline-block mb-4 ml-4">
               <TypeAnimation
                 key={i18n.language}
                 sequence={roles.flatMap(role => [role, 2000])}
@@ -76,7 +76,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-slate-300 max-w-xl leading-relaxed mt-4 leading-6 text-[var(--p-color)]">{t("header paragraph")}</p>
+          <p className=" text-[length:var(--text-hero-paragraph)] max-w-xl leading-relaxed mt-4 leading-6 text-[var(--p-color)]">{t("header paragraph")}</p>
 
           <a
             href="/cv/Nagah_Rady_CV.pdf"

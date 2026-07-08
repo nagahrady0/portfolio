@@ -49,15 +49,15 @@ const Portfolio = () => {
                        <Heading>
                          {t("portfolio title")}
                        </Heading>
-        <p className="max-[767px]:w-[90%] text-center leading-6 w-[60%] text-[var(--p-color)]">
+        <p className="max-[767px]:w-[90%]  text-[length:var(--text-paragraph)]  text-center leading-6 w-[60%] text-[var(--p-color)]">
           {t("portfolio description")}
         </p>
         <div className="bg-[var(--second-background-color)] rounded-[25px] shadow-[1px_1px_12px_rgba(0,0,0,0.9)] px-[25px] py-0">
           <ul className="max-[767px]:w-[90%] list-none flex gap-[25px]
 ">
-            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[18px] font-medium hover:text-[var(--second-color)] ${category === "all" ? "active" : ""}`} onClick={() => changeCategory("all")}>{t("all")}</li>
-            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[18px] font-medium hover:text-[var(--second-color)] ${category === "projects" ? "active" : ""}`} onClick={() => changeCategory("projects")}>{t("projects")}</li>
-            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[18px] font-medium hover:text-[var(--second-color)] ${category === "challenges" ? "active" : ""}`} onClick={() => changeCategory("challenges")}>{t("challenges")}</li>
+            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[length:var(--text-nav)] font-medium hover:text-[var(--second-color)] ${category === "all" ? "active" : ""}`} onClick={() => changeCategory("all")}>{t("all")}</li>
+            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[length:var(--text-nav)] font-medium hover:text-[var(--second-color)] ${category === "projects" ? "active" : ""}`} onClick={() => changeCategory("projects")}>{t("projects")}</li>
+            <li className={`capitalize cursor-pointer p-[15px] transition-all duration-200 text-[length:var(--text-nav)] font-medium hover:text-[var(--second-color)] ${category === "challenges" ? "active" : ""}`} onClick={() => changeCategory("challenges")}>{t("challenges")}</li>
           </ul>
         </div>
         <div className='max-[767px]:flex max-[767px]:flex-col max-[767px]:items-center max-[767px]:justify-center max-[767px]:gap-5 grid grid-cols-3 gap-5'>

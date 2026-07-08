@@ -20,13 +20,13 @@ const Navbar = (props) => {
     <>
       <div className="w-full px-4 bg-[var(--main-background-color)] shadow-[1px_1px_5px_rgba(0,0,0,0.2)] transition-all duration-300">
         <div className="mx-auto max-w-[1200px] h-[80px] flex justify-between items-center text-[var(--h1-color)] px-5 md:px-0">
-         	 <NavLink to="home" desktopLink={true} className='text-[var(--second-color)]'>
+         	 <NavLink to="home" desktopLink={true} className='text-[length:var(--text-logo)] text-[var(--second-color)]'>
                             {t("nagah")}
            </NavLink>
 
           <ul className="hidden md:flex gap-4">
             {desktopLinks.map((link, index) => (
-              <NavLink key={index} to={link} desktopLink={true} >
+              <NavLink key={index} to={link} desktopLink={true} className='text-[length:var(--text-nav)]'>
                 {t(link)}
               </NavLink>
             ))}
@@ -38,7 +38,7 @@ const Navbar = (props) => {
             smooth={true}
             duration={500}
             spy={true}
-            className="hidden md:inline"
+            className="hidden md:inline text-[length:var(--text-nav)]"
           >
             <Button>
               <BiComment />

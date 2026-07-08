@@ -57,7 +57,7 @@ const Contact = () => {
         <div className="container max-md:max-w-[600px] max-w-[1200px] mx-auto my-[25px] flex flex-col items-center gap-[35px] text-[var(--h1-color)]">
           <Heading>{t('contact')}</Heading>
           
-          <p className="max-md:w-[90%] max-md:text-center text-[var(--p-color)]">{t('contact description')}</p>
+          <p className="max-md:w-[90%] max-md:text-center text-[length:var(--text-paragraph)] text-[var(--p-color)]">{t('contact description')}</p>
 
           <form ref={form} onSubmit={sendEmail} className="max-md:w-[90%] flex flex-col items-center gap-[40px] w-[50%] pt-[30px]">
 

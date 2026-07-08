@@ -53,8 +53,8 @@ const Card = ({ link, src, title, technology }) => {
                          after:bottom-0
                          "
                          ></span>
-        <div className="absolute left-[25px] text-[var(--second-color)] p-[10px] bg-[rgba(0,0,0,0.5)] shadow-[1px_1px_5px_rgba(0,0,0,0.5)] text-[22px] -top-[100px]">{title}</div>
-        <div className="absolute left-[25px] text-[var(--second-color)] p-[10px] bg-[rgba(0,0,0,0.5)] shadow-[1px_1px_5px_rgba(0,0,0,0.5)] text-[22px] -bottom-[100px]">{technology}</div>
+        <div className="absolute left-[25px] text-[var(--second-color)] p-[10px] bg-[rgba(0,0,0,0.5)] shadow-[1px_1px_5px_rgba(0,0,0,0.5)] text-[length:var(--text-card-title)] -top-[100px]">{title}</div>
+        <div className="absolute left-[25px] text-[var(--second-color)] p-[10px] bg-[rgba(0,0,0,0.5)] shadow-[1px_1px_5px_rgba(0,0,0,0.5)] text-[length:var(--text-card-title)] -bottom-[100px]">{technology}</div>
       </a>
     </div>
   );

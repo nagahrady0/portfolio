@@ -33,7 +33,7 @@ export default function NotFound() {
       </p>
 
       <p className="text-base text-center max-w-xs leading-relaxed mb-8 [color:var(--p-color)]">
-        {t("message")}
+        {t("message notfound")}
       </p>
 
       <button

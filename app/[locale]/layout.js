@@ -76,7 +76,6 @@ export async function generateMetadata({ params }) {
     },
   };
 }
-
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
   const messages = await getMessages();

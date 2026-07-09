@@ -15,7 +15,6 @@ const THEMES = [
 const ALL_THEMES = THEMES.map(t => t.id);
 
 export default function SettingsPanel() {
-  const router= useRouter();
   const locale = useLocale();
   const [theme, setTheme] = useState("theme-light");
   const [open, setOpen] = useState(false);

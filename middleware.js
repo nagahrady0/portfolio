@@ -6,5 +6,6 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)']
+  // ضيفنا sitemap|robots صراحة جوه الاستثناء عشان الميدل وير يرفع إيده عنهم تماماً
+  matcher: ['/((?!api|_next|sitemap\\.xml|robots\\.txt|.*\\..*).*)']
 };

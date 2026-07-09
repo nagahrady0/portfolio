@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/navigation'
+import Link from 'next/link';
 import { useLocale } from 'next-intl';
 
 const THEMES = [
@@ -39,9 +39,7 @@ export default function SettingsPanel() {
     applyTheme(newTheme);
   };
 
-  const changeLang = (lang) => {
-    router.push(lang);
-  };
+
 
 
   return (
@@ -76,17 +74,14 @@ export default function SettingsPanel() {
             <span className="text-xs text-gray-400 mb-1">Language</span>
             <div className="flex gap-2">
               {["en", "ar"].map(lng => (
-                <button
-                  key={lng}
-                  onClick={() => changeLang(lng)}
-                  className={`flex-1 py-1.5 rounded-lg text-sm font-medium transition-all ${
+                <Link href={`/${lng}`}  key={lng}                  
+                className={`flex-1 py-1.5 rounded-lg text-sm font-medium text-center transition-all ${
                     locale === lng
                       ? "bg-orange-500 text-white"
                       : "bg-gray-800 hover:bg-gray-700"
-                  }`}
-                >
+                  }`}>
                   {lng.toUpperCase()}
-                </button>
+                </Link>
               ))}
             </div>
           </div>

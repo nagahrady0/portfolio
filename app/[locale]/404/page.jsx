@@ -1,6 +1,8 @@
 "use client";
 import { useTranslations } from 'next-intl';
 import { useRouter } from "next/navigation";
+import CustomCursor from "@/components/ui/cursor/CustomCursor";
+
 
 export default function NotFound() {
   const router = useRouter();
@@ -9,6 +11,7 @@ export default function NotFound() {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-8 [background:var(--main-background-color)]">
+     <CustomCursor />
       <h1 className="text-[120px] font-bold leading-none tracking-[-4px] relative select-none [color:var(--h1-color)]">
         4<span className="[color:var(--second-color)]">0</span>4
         <span

@@ -21,15 +21,27 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const isAr = locale === 'ar';
+  const baseUrl = "https://nagahrady.vercel.app";
 
   return {
-    metadataBase: new URL("https://nagahrady.vercel.app/"),
+    metadataBase: new URL(baseUrl),
     title: isAr
       ? "نجاح راضي | مصمم مواقع ومطور واجهات أمامية"
       : "Nagah Rady | Web Designer & Front End Developer",
     description: isAr
       ? "مصمم مواقع محترف وشغوف بخبرة في إنشاء مواقع جذابة وسهلة الاستخدام."
       : "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
+    
+    // 👇 الحتة السحرية اللي ناقصاك عشان جوجل والأرشفة القديمة
+    alternates: {
+      canonical: `${baseUrl}/${locale === 'en' ? '' : locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        ar: `${baseUrl}/ar`,
+        'x-default': baseUrl, // اللينك الرئيسي القديم يفضل هو الواجهة الافتراضية
+      },
+    },
+
     openGraph: {
       title: isAr
         ? "نجاح راضي | مصمم مواقع ومطور واجهات أمامية"
@@ -37,7 +49,7 @@ export async function generateMetadata({ params }) {
       description: isAr
         ? "مصمم مواقع محترف وشغوف بخبرة في إنشاء مواقع جذابة وسهلة الاستخدام."
         : "Skilled and passionate web designer with experience in creating visually appealing and user-friendly websites.",
-      url: "https://nagahrady.vercel.app/",
+      url: `${baseUrl}/${locale}`,
       siteName: "Nagah Rady Portfolio",
       images: [
         {
@@ -64,7 +76,6 @@ export async function generateMetadata({ params }) {
     },
   };
 }
-
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
   const messages = await getMessages();

@@ -62,18 +62,18 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail} className="max-md:w-[90%] flex flex-col items-center gap-[40px] w-[50%] pt-[30px]">
 
             <div className={`${inputWrapClass} h-[40px]`} data-aos="fade-right">
-              <input className={inputClass} ref={nameRef} type="text" onBlur={handleLabel} name="user_name" />
-              <label className={labelClass}>{t('username')}</label>
+              <input id="user" className={inputClass} ref={nameRef} type="text" onBlur={handleLabel} name="user_name" />
+              <label htmlFor="user" className={labelClass}>{t('username')}</label>
             </div>
 
             <div className={`${inputWrapClass} h-[40px]`} data-aos="fade-left">
-              <input className={inputClass} ref={emailRef} type="email" onBlur={handleLabel} name="user_email" />
-              <label className={labelClass}>{t('email')}</label>
+              <input id="email" className={inputClass} ref={emailRef} type="email" onBlur={handleLabel} name="user_email" />
+              <label htmlFor="email" className={labelClass}>{t('email')}</label>
             </div>
 
             <div className={`${inputWrapClass} h-[150px]`} data-aos="fade-right">
-              <textarea className={`${inputClass} p-[10px] pl-0`} ref={messageRef} onBlur={handleLabel} name="message"></textarea>
-              <label className={labelClass}>{t('message')}</label>
+              <textarea id="message" className={`${inputClass} p-[10px] pl-0`} ref={messageRef} onBlur={handleLabel} name="message"></textarea>
+              <label htmlFor="message" className={labelClass}>{t('message')}</label>
             </div>
 
             <Button type="submit" data-aos="fade-left" disabled={isSubmitting}>

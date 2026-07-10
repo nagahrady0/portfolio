@@ -17,7 +17,7 @@ export function getMetadata(locale) {
 
     // الحتة السحرية اللي ناقصاك عشان جوجل والأرشفة القديمة
     alternates: {
-      canonical: `${baseUrl}/${locale === 'en' ? '' : locale}`,
+      canonical: `${baseUrl}/${locale}`,
       languages: {
         en: `${baseUrl}/en`,
         ar: `${baseUrl}/ar`,

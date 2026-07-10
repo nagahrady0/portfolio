@@ -25,7 +25,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function RootLayout({ children, params }) {
-  const { locale } = await params;
+  const resolvedParams = await params;
+  // إذا كانت الـ locale غير موجودة (undefined) اجعلها الافتراضية 'en' فوراً لمنع اعتراض جوجل
+  const locale = resolvedParams?.locale || 'en';
+  
   const messages = await getMessages();
 
   return (

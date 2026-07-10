@@ -12,6 +12,7 @@ const NavLink = ({children ,  to , desktopLink , onClick  , className=""}) => {
   return (
     <Link
       to={to}
+      href={`#${to}`}
       offset={-100}
       smooth={true}
       duration={500}

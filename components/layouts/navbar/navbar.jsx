@@ -21,7 +21,7 @@ const Navbar = (props) => {
     <>
       <div className="w-full px-4 bg-[var(--main-background-color)] shadow-[1px_1px_5px_rgba(0,0,0,0.2)] transition-all duration-300">
         <div className="mx-auto max-w-[1200px] h-[80px] flex justify-between items-center text-[var(--h1-color)] px-5 md:px-0">
-         	 <NavLink to="home" desktopLink={true} className='text-[length:var(--text-logo)] text-[var(--second-color)]'>
+         	 <NavLink to="home" href="#home" desktopLink={true} className='text-[length:var(--text-logo)] text-[var(--second-color)]'>
                             {t("nagah")}
            </NavLink>
 
@@ -35,6 +35,7 @@ const Navbar = (props) => {
 
           <Link
             to="contact"
+            href='#contact'
             offset={-100}
             smooth={true}
             duration={500}

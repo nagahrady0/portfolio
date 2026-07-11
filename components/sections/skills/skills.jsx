@@ -17,7 +17,8 @@ const skills = [
   { src: '/assets/skills/TS.png',                           alt: 'ts' },
   { src: '/assets/skills/git.png',                          alt: 'git' },
   { src: '/assets/skills/redux.svg',                        alt: 'redux' },
-  { src: '/assets/skills/react.png',                        alt: 'react' },
+  { src: '/assets/skills/react.png',                        alt: 'reactjs' },
+  { src: '/assets/skills/nextjs-black.svg',                        alt: 'nextjs' },
 ];
 
 const imgClass = 'w-[100px] h-[100px] cursor-pointer outline-none select-none border-0';

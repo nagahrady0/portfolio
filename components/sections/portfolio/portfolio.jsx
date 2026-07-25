@@ -14,7 +14,7 @@ const Portfolio = () => {
 
   const [category, setCategory] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5); // Adjust as needed
+  const [itemsPerPage] = useState(6); // Adjust as needed
 
   useEffect(() => {
     AOS.init();

@@ -1,6 +1,6 @@
 export function getMetadata(locale) {
   const isAr = locale === 'ar';
-  const baseUrl = "https://nagahrady.vercel.app";
+  const baseUrl = "https://nagahrady.site";
 
   const title = isAr
     ? "نجاح راضي | مصمم مواقع ومطور واجهات أمامية"
@@ -15,13 +15,12 @@ export function getMetadata(locale) {
     title,
     description,
 
-    // الحتة السحرية اللي ناقصاك عشان جوجل والأرشفة القديمة
     alternates: {
       canonical: `${baseUrl}/${locale}`,
       languages: {
         en: `${baseUrl}/en`,
         ar: `${baseUrl}/ar`,
-        'x-default': baseUrl, // اللينك الرئيسي القديم يفضل هو الواجهة الافتراضية
+        'x-default': baseUrl,
       },
     },
 
@@ -42,7 +41,7 @@ export function getMetadata(locale) {
       images: ["/og-image.png"],
     },
     verification: {
-      google: "i-xPsKLIMHewIeYku54-cojkMuZxFjbTtDqz72AyGfU",
+      google: "rAiM1JbVGGrZ5JkQnP6WYDyU-K15AY2mq2ltV2JWBnc", // التوكن الجديد
     },
   };
 }

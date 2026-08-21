@@ -1,6 +1,6 @@
 export default function sitemap() {
   const locales = ['en', 'ar'];
-  const baseUrl = 'https://nagahrady.vercel.app';
+  const baseUrl = 'https://nagahrady.site';
 
   return locales.map((locale) => ({
     url: `${baseUrl}/${locale}`,

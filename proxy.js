@@ -9,9 +9,8 @@ const intlMiddleware = createMiddleware({
 export default function proxy(request) {
   const response = intlMiddleware(request);
 
-  // إذا كان التوجيه من next-intl نرجعه كـ 307 مؤقت
   if (response.status === 307 || response.status === 308) {
-    return NextResponse.redirect(response.headers.get('location'), 307);
+    return NextResponse.redirect(response.headers.get('location'), 308);
   }
 
   return response;

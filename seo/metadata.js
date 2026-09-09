@@ -20,7 +20,7 @@ export function getMetadata(locale) {
       languages: {
         en: `${baseUrl}/en`,
         ar: `${baseUrl}/ar`,
-        'x-default': baseUrl,
+        'x-default': `${baseUrl}/en`,
       },
     },
 
